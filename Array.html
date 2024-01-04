@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+
+<body>
+    <p id="per"></p>
+    <p id="fru"></p>
+    <p id="fruitLen"></p>
+    <p id="fruitsList"></p>
+    <p id="fruSort"></p>
+    <p id="fruReverse"></p>
+    <p id="loopResult"></p>
+
+    <script>
+        const person = { firstName: "John", lastName: "Doe", age: 46 };
+        document.getElementById("per").innerHTML = person.firstName;
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let size = fruits.length;
+        document.getElementById("fru").innerHTML = size;
+
+        document.getElementById("fruitLen").innerHTML = fruits[fruits.length - 1];
+
+        //join method
+        const fruitsList = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("fruitsList").innerHTML = fruitsList.join(" * ");
+
+        //Sorting
+        fruits.sort();
+        document.getElementById("fruSort").innerHTML = fruits;
+
+        fruits.reverse();
+        document.getElementById("fruReverse").innerHTML = fruits;
+
+        //Iteration
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.getElementById("loopResult").innerHTML = txt;
+        function myFunction(value, index, array) {
+            txt += value + "<br>";
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
